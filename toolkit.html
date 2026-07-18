@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toolkit | Uzair Amjad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo">Uzair<span>.</span></a>
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle Navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav class="nav-container">
+            <button class="menu-close" onclick="toggleMenu()">×</button>
+            <ul class="nav-links">
+                <li><a href="index.html#services">Expertise</a></li>
+                <li><a href="toolkit.html" class="active-link">Toolkit</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html" class="nav-btn">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="section subpage-content">
+        <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
+            <h2>Technical Toolkit</h2>
+            <p>The verified technologies, languages, and strategic systems behind my portfolio.</p>
+        </div>
+
+        <div class="toolkit-grid">
+            <div class="toolkit-category-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="category-icon">💻</div>
+                <h3>Backend & Systems</h3>
+                <p class="category-desc">Building backend mechanics, data flow pipelines, and custom data processing engines.</p>
+                <div class="skills-wrapper horizontal-left">
+                    <div class="skill-tag">HTML5 & CSS3 Spec</div>
+                    <div class="skill-tag">FastAPI Framework</div>
+                    <div class="skill-tag">PostgreSQL Relational DB</div>
+                </div>
+            </div>
+
+            <div class="toolkit-category-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="category-icon">🛍️</div>
+                <h3>E-Commerce Operations</h3>
+                <p class="category-desc">Custom store setups, local private label tracking, and theme layout customization.</p>
+                <div class="skills-wrapper horizontal-left">
+                    <div class="skill-tag">Shopify Liquid Architecture</div>
+                    <div class="skill-tag">Conversion Rate Sprints</div>
+                    <div class="skill-tag">Private Label Fulfillment</div>
+                </div>
+            </div>
+
+           
+            <div class="toolkit-category-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="category-icon">🎯</div>
+                <h3>Paid Acquisition & Control</h3>
+                <p class="category-desc">Managing campaign structures, digital interfaces, and code changes.</p>
+                <div class="skills-wrapper horizontal-left">
+                    <div class="skill-tag">Meta Ads Manager</div>
+                    <div class="skill-tag">Canva Pro Layouts</div>
+                    <div class="skill-tag">Git Version Control</div>
+                    <div class="skill-tag">GitHub Environment</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Uzair Amjad. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true });
+        function toggleMenu() { document.querySelector('.nav-container').classList.toggle('active'); }
+    </script>
+</body>
+</html>

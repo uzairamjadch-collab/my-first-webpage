@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Uzair Amjad</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo">Uzair<span>.</span></a>
+        <button class="menu-toggle" onclick="toggleMenu()"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+        <nav class="nav-container">
+            <button class="menu-close" onclick="toggleMenu()">×</button>
+            <ul class="nav-links">
+                <li><a href="index.html#services">Expertise</a></li>
+                <li><a href="toolkit.html">Toolkit</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html" class="nav-btn active-btn">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="section contact-section subpage-content">
+        <div class="contact-card" data-aos="zoom-in" data-aos-duration="800">
+            <h2>Initiate an Engagement</h2>
+            <p>Let's align on store builds, application engineering, or strategic ad scaling pipelines.</p>
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                <input type="hidden" name="access_key" value="4c9673a5-c35d-4ae3-a2ae-5164686738a5">
+                <input type="checkbox" name="botcheck" class="hidden-honeypot" style="display: none;">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Name / Enterprise" required class="form-input">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Email Address" required class="form-input">
+                </div>
+                <div class="form-group">
+                    <select name="project_type" required class="form-input form-select">
+                        <option value="" disabled selected hidden>Select Objective</option>
+                        <option value="Shopify Custom Architecture">Shopify Custom Architecture</option>
+                        <option value="Full-Stack Application Development">Full-Stack Application Development</option>
+                        <option value="Paid Acquisition Strategy">Paid Acquisition Strategy</option>
+                        <option value="High-Retention Media Assets">High-Retention Media Assets</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" rows="5" placeholder="Detail your project specifications and technical requirements..." required class="form-input"></textarea>
+                </div>
+                <div class="form-group">
+                </div>
+                <button type="submit" class="btn btn-primary submit-btn">Transmit Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer><p>© 2026 Uzair Amjad. All rights reserved.</p></footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true });
+        function toggleMenu() { document.querySelector('.nav-container').classList.toggle('active'); }
+    </script>
+</body>
+</html>
