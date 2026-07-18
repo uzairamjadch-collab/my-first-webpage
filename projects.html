@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Uzair Amjad</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <div class="matrix-grid-bg"></div>
+    <div class="ambient-glow"></div>
+
     <header class="navbar">
-        <a href="index.html" class="logo">Uzair<span>.</span></a>
+        <a href="index.html" class="logo"><span class="logo-token"></span> Uzair<span>.</span></a>
         <button class="menu-toggle" onclick="toggleMenu()"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
         <nav class="nav-container">
             <button class="menu-close" onclick="toggleMenu()">×</button>
@@ -25,53 +28,51 @@
 
     <section class="section subpage-content">
         <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
-            <h2>Production Portfolios</h2>
-            <p>Live digital setups, marketing campaigns, and core application engines.</p>
+            <span class="section-index"></span>
+            <h2>Production Deployments</h2>
+            <p>Live technical architectures, data processing instances, and scalable monetization networks.</p>
         </div>
         <div class="projects-grid">
             <div class="work-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="work-img-placeholder">🛍️ Shopify E-Commerce</div>
+                <div class="work-img-placeholder">🛍️ SHOPIFY // ENGINE</div>
                 <div class="work-info">
-                    <span>Private Label Brand Launch</span>
+                    <span>Private Label Venture Operations</span>
                     <h3>Elif Pakistan Storefront</h3>
-                    <p>Designed a custom Shopify skincare store. Configured clean e-commerce layouts, conversion funnels, and inventory displays optimized for direct consumer orders.</p>
+                    <p>Designed a custom Shopify skincare platform. Configured precise user journey layouts, direct transactional pipelines, and localized real-time stocking indexes optimized for conversion scaling metrics.</p>
                 </div>
             </div>
             
             <div class="work-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="work-img-placeholder">☕ Software Engineering</div>
+                <div class="work-img-placeholder">☕ CORE.JAVA // RUNTIME</div>
                 <div class="work-info">
-                    <span>Desktop & Database Operations</span>
+                    <span>Desktop System Logic & Data Relations</span>
                     <h3>Café Management System</h3>
-                    <p>Engineered a desktop system to track checkout streams, compute pricing totals automatically, update item counts, and format clean client invoices.</p>
+                    <p>Engineered a desktop application system designed to handle real-time checkout updates, auto-calculate compounding pricing matrices, regulate stock indexes, and output clean formatted consumer receipts.</p>
                 </div>
             </div>
 
             <div class="work-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="work-img-placeholder">🎯 Paid Acquisition</div>
+                <div class="work-img-placeholder">🎯 META.API // OPTIMIZATION</div>
                 <div class="work-info">
-                    <span>Meta Agency Operations</span>
+                    <span>Growth Agency Distribution Models</span>
                     <h3>E-Commerce Client Growth Funnels</h3>
-                    <p>Configured custom Meta Ad campaigns. Handled audience profile definitions, retargeting logic parameters, and daily ad spending adjustments to scale client store conversions.</p>
+                    <p>Configured performance-driven Meta ad allocation algorithms. Formulated target persona criteria sets, programmatic retargeting pipelines, and dynamic ad budget pacing setups to safely compound store conversions.</p>
                 </div>
             </div>
 
             <div class="work-card" data-aos="fade-up" data-aos-delay="400">
-                <div class="work-img-placeholder">🎨 Visual Layouts</div>
+                <div class="work-img-placeholder">🎨 ASSET.KIT // PRODUCTION</div>
                 <div class="work-info">
-                    <span>Graphic Asset Design</span>
+                    <span>Visual Content Asset Packaging</span>
                     <h3>Canva Strategic Brand Elements</h3>
-                    <p>Designed cohesive visual assets for promotional campaigns, containing customized image layers, color-potted cards, and marketing banners.</p>
+                    <p>Engineered highly cohesive high-class brand visual design modules for ongoing marketing runs, implementing structured layout grids, specific typographic profiles, and optimized conversion creative layers.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer><p>© 2026 Uzair Amjad. All rights reserved.</p></footer>
+    <footer class="footer"><p>© 2026 Uzair Amjad. All rights reserved.</p></footer>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({ once: true });
-        function toggleMenu() { document.querySelector('.nav-container').classList.toggle('active'); }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

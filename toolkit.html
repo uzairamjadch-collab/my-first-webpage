@@ -6,13 +6,16 @@
     <title>Toolkit | Uzair Amjad</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <div class="matrix-grid-bg"></div>
+    <div class="ambient-glow"></div>
+
     <header class="navbar">
-        <a href="index.html" class="logo">Uzair<span>.</span></a>
+        <a href="index.html" class="logo"><span class="logo-token"></span> Uzair<span>.</span></a>
         <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle Navigation">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -31,15 +34,17 @@
 
     <section class="section subpage-content">
         <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
+            <span class="section-index"></span>
             <h2>Technical Toolkit</h2>
-            <p>The verified technologies, languages, and strategic systems behind my portfolio.</p>
+            <p>The verified technologies, language frames, and strategy matrices driving my workflows.</p>
         </div>
 
         <div class="toolkit-grid">
             <div class="toolkit-category-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-meta"></div>
                 <div class="category-icon">💻</div>
                 <h3>Backend & Systems</h3>
-                <p class="category-desc">Building backend mechanics, data flow pipelines, and custom data processing engines.</p>
+                <p class="category-desc">Asynchronously handling application logical structures, raw data matrix streams, and modular processing engines.</p>
                 <div class="skills-wrapper horizontal-left">
                     <div class="skill-tag">HTML5 & CSS3 Spec</div>
                     <div class="skill-tag">FastAPI Framework</div>
@@ -48,9 +53,10 @@
             </div>
 
             <div class="toolkit-category-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-meta"></div>
                 <div class="category-icon">🛍️</div>
                 <h3>E-Commerce Operations</h3>
-                <p class="category-desc">Custom store setups, local private label tracking, and theme layout customization.</p>
+                <p class="category-desc">Formulating standalone storefront logic, deploying private label fulfillment pipelines, and optimization testing variables.</p>
                 <div class="skills-wrapper horizontal-left">
                     <div class="skill-tag">Shopify Liquid Architecture</div>
                     <div class="skill-tag">Conversion Rate Sprints</div>
@@ -58,11 +64,11 @@
                 </div>
             </div>
 
-           
             <div class="toolkit-category-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="card-meta"></div>
                 <div class="category-icon">🎯</div>
                 <h3>Paid Acquisition & Control</h3>
-                <p class="category-desc">Managing campaign structures, digital interfaces, and code changes.</p>
+                <p class="category-desc">Managing campaign structural tracking arrays, creative asset layers, and code configuration updates.</p>
                 <div class="skills-wrapper horizontal-left">
                     <div class="skill-tag">Meta Ads Manager</div>
                     <div class="skill-tag">Canva Pro Layouts</div>
@@ -73,14 +79,11 @@
         </div>
     </section>
 
-    <footer>
+    <footer class="footer">
         <p>© 2026 Uzair Amjad. All rights reserved.</p>
     </footer>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({ once: true });
-        function toggleMenu() { document.querySelector('.nav-container').classList.toggle('active'); }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
