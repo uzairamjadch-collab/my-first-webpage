@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toolkit | Uzair Amjad</title>
+    <meta name="description" content="The technologies, frameworks, and strategy tools Uzair Amjad uses across backend systems, e-commerce operations, and paid acquisition.">
+    <meta name="theme-color" content="#0D1117">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230D1117'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='18' font-weight='700' fill='%234C7CD1' text-anchor='middle'%3EU%3C/text%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -11,18 +14,18 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="matrix-grid-bg"></div>
-    <div class="ambient-glow"></div>
+    <div class="matrix-grid-bg" aria-hidden="true"></div>
+    <div class="ambient-glow" aria-hidden="true"></div>
 
     <header class="navbar">
-        <a href="index.html" class="logo"><span class="logo-token"></span> Uzair<span>.</span></a>
-        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle Navigation">
+        <a href="index.html" class="logo"><span class="logo-token" aria-hidden="true"></span> Uzair<span>.</span></a>
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav" onclick="toggleMenu()">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </button>
-        <nav class="nav-container">
-            <button class="menu-close" onclick="toggleMenu()">×</button>
+        <nav class="nav-container" id="primary-nav" aria-label="Primary">
+            <button class="menu-close" aria-label="Close navigation" onclick="toggleMenu()">×</button>
             <ul class="nav-links">
                 <li><a href="index.html#services">Expertise</a></li>
                 <li><a href="toolkit.html" class="active-link">Toolkit</a></li>
@@ -32,17 +35,18 @@
         </nav>
     </header>
 
+    <main>
     <section class="section subpage-content">
         <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
-            <span class="section-index"></span>
+            <span class="section-index">// 06 — STACK</span>
             <h2>Technical Toolkit</h2>
             <p>The verified technologies, language frames, and strategy matrices driving my workflows.</p>
         </div>
 
         <div class="toolkit-grid">
             <div class="toolkit-category-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="card-meta"></div>
-                <div class="category-icon">💻</div>
+                <div class="card-meta">STACK.01</div>
+                <div class="category-icon" aria-hidden="true">💻</div>
                 <h3>Backend & Systems</h3>
                 <p class="category-desc">Asynchronously handling application logical structures, raw data matrix streams, and modular processing engines.</p>
                 <div class="skills-wrapper horizontal-left">
@@ -53,8 +57,8 @@
             </div>
 
             <div class="toolkit-category-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="card-meta"></div>
-                <div class="category-icon">🛍️</div>
+                <div class="card-meta">STACK.02</div>
+                <div class="category-icon" aria-hidden="true">🛍️</div>
                 <h3>E-Commerce Operations</h3>
                 <p class="category-desc">Formulating standalone storefront logic, deploying private label fulfillment pipelines, and optimization testing variables.</p>
                 <div class="skills-wrapper horizontal-left">
@@ -65,8 +69,8 @@
             </div>
 
             <div class="toolkit-category-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="card-meta"></div>
-                <div class="category-icon">🎯</div>
+                <div class="card-meta">STACK.03</div>
+                <div class="category-icon" aria-hidden="true">🎯</div>
                 <h3>Paid Acquisition & Control</h3>
                 <p class="category-desc">Managing campaign structural tracking arrays, creative asset layers, and code configuration updates.</p>
                 <div class="skills-wrapper horizontal-left">
@@ -78,6 +82,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <footer class="footer">
         <p>© 2026 Uzair Amjad. All rights reserved.</p>
