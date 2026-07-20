@@ -4,16 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Uzair Amjad</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="description" content="Get in touch with Uzair Amjad about Shopify development, full-stack applications, paid acquisition strategy, or brand design.">
+    <meta name="theme-color" content="#0D1117">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230D1117'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='18' font-weight='700' fill='%234C7CD1' text-anchor='middle'%3EU%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <div class="matrix-grid-bg" aria-hidden="true"></div>
+    <div class="ambient-glow" aria-hidden="true"></div>
+
     <header class="navbar">
-        <a href="index.html" class="logo">Uzair<span>.</span></a>
-        <button class="menu-toggle" onclick="toggleMenu()"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
-        <nav class="nav-container">
-            <button class="menu-close" onclick="toggleMenu()">×</button>
+        <a href="index.html" class="logo"><span class="logo-token" aria-hidden="true"></span> Uzair<span>.</span></a>
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav" onclick="toggleMenu()">
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+        <nav class="nav-container" id="primary-nav" aria-label="Primary">
+            <button class="menu-close" aria-label="Close navigation" onclick="toggleMenu()">×</button>
             <ul class="nav-links">
                 <li><a href="index.html#services">Expertise</a></li>
                 <li><a href="toolkit.html">Toolkit</a></li>
@@ -23,21 +33,33 @@
         </nav>
     </header>
 
+    <main>
     <section class="section contact-section subpage-content">
         <div class="contact-card" data-aos="zoom-in" data-aos-duration="800">
+            <div class="terminal-bar">
+                <div class="term-dots" aria-hidden="true">
+                    <span class="t-dot"></span><span class="t-dot"></span><span class="t-dot"></span>
+                </div>
+                <span class="term-title">// new_engagement.request</span>
+            </div>
             <h2>Initiate an Engagement</h2>
-            
+            <p class="contact-desc-text">Tell me about the project and I'll respond within 1–2 business days.</p>
+
             <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
                 <input type="hidden" name="access_key" value="4c9673a5-c35d-4ae3-a2ae-5164686738a5">
-                <input type="checkbox" name="botcheck" class="hidden-honeypot" style="display: none;">
+                <input type="checkbox" name="botcheck" class="hidden-honeypot" tabindex="-1" autocomplete="off">
+
                 <div class="form-group">
-                    <input type="text" name="name" placeholder="Name / Enterprise" required class="form-input">
+                    <label class="form-label" for="cf-name">Name / Enterprise</label>
+                    <input type="text" id="cf-name" name="name" placeholder="Name / Enterprise" required class="form-input" autocomplete="name">
                 </div>
                 <div class="form-group">
-                    <input type="email" name="email" placeholder="Email Address" required class="form-input">
+                    <label class="form-label" for="cf-email">Email Address</label>
+                    <input type="email" id="cf-email" name="email" placeholder="Email Address" required class="form-input" autocomplete="email">
                 </div>
                 <div class="form-group">
-                    <select name="project_type" required class="form-input form-select">
+                    <label class="form-label" for="cf-project">Project objective</label>
+                    <select id="cf-project" name="project_type" required class="form-input form-select">
                         <option value="" disabled selected hidden>Select Objective</option>
                         <option value="Shopify Custom Architecture">Shopify Custom Architecture</option>
                         <option value="Full-Stack Application Development">Full-Stack Application Development</option>
@@ -46,20 +68,19 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <textarea name="message" rows="5" placeholder="Detail your project specifications and technical requirements..." required class="form-input"></textarea>
+                    <label class="form-label" for="cf-message">Project details</label>
+                    <textarea id="cf-message" name="message" rows="5" placeholder="Detail your project specifications and technical requirements..." required class="form-input"></textarea>
                 </div>
-                <div class="form-group">
-                </div>
+
                 <button type="submit" class="btn btn-primary submit-btn">Transmit Message</button>
+                <p class="form-status" role="status" aria-live="polite"></p>
             </form>
         </div>
     </section>
+    </main>
 
-    <footer><p>© 2026 Uzair Amjad. All rights reserved.</p></footer>
+    <footer class="footer"><p>© 2026 Uzair Amjad. All rights reserved.</p></footer>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({ once: true });
-        function toggleMenu() { document.querySelector('.nav-container').classList.toggle('active'); }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
