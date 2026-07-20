@@ -18,20 +18,23 @@
 }
 html {
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  width: 100%;
 }
 body {
   background-color: var(--bg-dark);
   color: var(--text-main);
   line-height: 1.5;
   overflow-x: hidden;
+  width: 100%;
   min-height: 100vh;
+  position: relative;
 }
 img, svg {
   max-width: 100%;
   display: block;
 }
 
-/* Accessible focus states — always visible for keyboard users */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -64,18 +67,31 @@ textarea:focus-visible {
   z-index: -1;
   pointer-events: none;
 }
+
+.nav-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  padding: 20px 6%;
+}
+.nav-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(13, 17, 23, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 6%;
-  border-bottom: 1px solid var(--border);
-  background: rgba(13, 17, 23, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  flex: 1;
+  min-width: 0;
 }
 .logo {
   font-size: 1.15rem;
@@ -625,7 +641,7 @@ textarea:focus-visible {
 }
 
 @media (max-width: 768px) {
-  .navbar { padding: 16px 5%; }
+  .nav-wrapper { padding: 16px 5%; }
   .menu-toggle { display: block; }
   .menu-close {
     display: block;
@@ -698,7 +714,7 @@ textarea:focus-visible {
 }
 
 @media (max-width: 420px) {
-  .navbar { padding: 14px 4%; }
+  .nav-wrapper { padding: 14px 4%; }
   .logo { font-size: 1.05rem; }
   .section-header h2 { font-size: 1.5rem; }
   .service-card, .toolkit-category-card { padding: 30px 22px; }
@@ -716,7 +732,7 @@ textarea:focus-visible {
   .projects-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (min-width: 1440px) {
-  .navbar, .section { padding-left: 8%; padding-right: 8%; }
+  .nav-wrapper, .section { padding-left: 8%; padding-right: 8%; }
 }
 
 .service-card, .work-card, .toolkit-category-card {
@@ -753,7 +769,6 @@ textarea:focus-visible {
   pointer-events: auto !important;
 }
 
-/* Respect users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.001ms !important;
@@ -766,7 +781,6 @@ textarea:focus-visible {
   }
 }
 
-/* Disable the 3D tilt / expand-on-click effect on touch devices — it only makes sense with a mouse */
 @media (hover: none) and (pointer: coarse) {
   .service-card, .work-card, .toolkit-category-card {
     transform: none !important;
