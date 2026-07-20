@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    /* ---------- Mobile navigation ---------- */
     const navContainer = document.querySelector('.nav-container');
     const menuToggle = document.querySelector('.menu-toggle');
     const menuClose = document.querySelector('.menu-close');
@@ -57,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.key === 'Escape') closeMenuFn();
     });
 
-    /* ---------- Kinetic hover / expand cards (mouse-only) ---------- */
     const supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
     const cards = document.querySelectorAll(".service-card, .work-card, .toolkit-category-card");
 
@@ -166,7 +164,6 @@ document.addEventListener("DOMContentLoaded", () => {
         card.addEventListener("transitionend", transitionEndHandler);
     }
 
-    /* ---------- Button magnetic hover (mouse-only) ---------- */
     if (supportsHover) {
         const buttons = document.querySelectorAll(".btn, .nav-btn, .submit-btn");
         buttons.forEach(btn => {
@@ -183,7 +180,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    /* ---------- Contact form: submit via fetch, show inline status ---------- */
     const contactForm = document.querySelector(".contact-form");
     if (contactForm) {
         const statusEl = document.querySelector(".form-status");
