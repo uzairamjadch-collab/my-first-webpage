@@ -180,6 +180,18 @@ textarea:focus-visible {
   pointer-events: auto;
 }
 
+
+body.menu-open .kinetic-backdrop-blur {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+body.menu-open .nav-backdrop {
+  z-index: 100000;
+}
+body.menu-open .nav-container {
+  z-index: 100001;
+}
+
 .hero {
   min-height: 85vh;
   display: flex;
