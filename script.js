@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
         navContainer?.classList.add('active');
         navBackdrop.classList.add('active');
         menuToggle?.setAttribute('aria-expanded', 'true');
+        document.body.classList.add('menu-open');
         document.body.style.overflow = 'hidden';
     }
 
@@ -32,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         navContainer?.classList.remove('active');
         navBackdrop.classList.remove('active');
         menuToggle?.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('menu-open');
         document.body.style.overflow = '';
     }
 
