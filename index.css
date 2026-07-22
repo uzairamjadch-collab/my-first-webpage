@@ -176,7 +176,7 @@ textarea:focus-visible {
   transition: opacity 0.3s ease;
 }
 .nav-backdrop.active {
-  opacity: 0;
+  opacity: 1;
   pointer-events: auto;
 }
 
@@ -190,6 +190,10 @@ body.menu-open .nav-backdrop {
 }
 body.menu-open .nav-container {
   z-index: 100001;
+}
+
+body.menu-open .nav-wrapper {
+  z-index: 200000;
 }
 
 .hero {
