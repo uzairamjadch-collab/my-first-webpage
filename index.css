@@ -176,7 +176,7 @@ textarea:focus-visible {
   transition: opacity 0.3s ease;
 }
 .nav-backdrop.active {
-  opacity: 1;
+  opacity: 0;
   pointer-events: auto;
 }
 
