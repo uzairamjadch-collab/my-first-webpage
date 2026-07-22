@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
             disable: () => window.matchMedia('(prefers-reduced-motion: reduce)').matches
         });
     }
-
     const navContainer = document.querySelector('.nav-container');
     const menuToggle = document.querySelector('.menu-toggle');
     const menuClose = document.querySelector('.menu-close');
@@ -20,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
         navBackdrop.className = 'nav-backdrop';
         document.body.appendChild(navBackdrop);
     }
-
     function openMenu() {
         navContainer?.classList.add('active');
         navBackdrop.classList.add('active');
@@ -28,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.classList.add('menu-open');
         document.body.style.overflow = 'hidden';
     }
-
     function closeMenuFn() {
         navContainer?.classList.remove('active');
         navBackdrop.classList.remove('active');
@@ -36,7 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.classList.remove('menu-open');
         document.body.style.overflow = '';
     }
-
     window.toggleMenu = function () {
         if (navContainer?.classList.contains('active')) {
             closeMenuFn();
@@ -44,7 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
             openMenu();
         }
     };
-
     window.closeMenu = closeMenuFn;
 
     menuClose?.addEventListener('click', closeMenuFn);
@@ -53,11 +48,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', closeMenuFn);
     });
-
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeMenuFn();
     });
-
     const supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
     const cards = document.querySelectorAll(".service-card, .work-card, .toolkit-category-card");
 
@@ -82,13 +75,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 card.style.transform = `perspective(1200px) translate3d(0, -5px, 10px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
                 card.style.boxShadow = `0 20px 40px rgba(0, 0, 0, 0.6)`;
             });
-
             card.addEventListener("mouseleave", () => {
                 if (card.classList.contains("kinetic-expanded-view")) return;
                 card.style.transform = "perspective(1200px) translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg)";
                 card.style.boxShadow = "";
             });
-
             card.addEventListener("click", (e) => {
                 if (card.classList.contains("kinetic-expanded-view")) return;
                 e.stopPropagation();
@@ -96,7 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (activeExpandedCard) {
                     collapseCard(activeExpandedCard);
                 }
-
                 const rect = card.getBoundingClientRect();
                 originalCardState = {
                     top: rect.top,
@@ -107,7 +97,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     sibling: card.nextSibling,
                     styleCSS: card.style.cssText
                 };
-
                 card.style.width = `${rect.width}px`;
                 card.style.height = `${rect.height}px`;
                 card.style.position = "fixed";
@@ -128,20 +117,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
             });
         });
-
         backdrop.addEventListener("click", () => {
             if (activeExpandedCard) {
                 collapseCard(activeExpandedCard);
             }
         });
-
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && activeExpandedCard) {
                 collapseCard(activeExpandedCard);
             }
         });
     }
-
     function collapseCard(card) {
         backdrop.classList.remove("active");
         card.classList.remove("kinetic-expanded-view");
@@ -162,10 +148,8 @@ document.addEventListener("DOMContentLoaded", () => {
             activeExpandedCard = null;
             card.removeEventListener("transitionend", transitionEndHandler);
         };
-
         card.addEventListener("transitionend", transitionEndHandler);
     }
-
     if (supportsHover) {
         const buttons = document.querySelectorAll(".btn, .nav-btn, .submit-btn");
         buttons.forEach(btn => {
@@ -175,13 +159,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 const y = e.clientY - rect.top - rect.height / 2;
                 btn.style.transform = `translate3d(${x * 0.2}px, ${y * 0.2}px, 0) scale(1.01)`;
             });
-
             btn.addEventListener("mouseleave", () => {
                 btn.style.transform = "translate3d(0, 0, 0) scale(1)";
             });
         });
     }
-
     const contactForm = document.querySelector(".contact-form");
     if (contactForm) {
         const statusEl = document.querySelector(".form-status");
@@ -197,7 +179,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 statusEl.textContent = "";
                 statusEl.className = "form-status";
             }
-
             try {
                 const formData = new FormData(contactForm);
                 const response = await fetch(contactForm.action, {
